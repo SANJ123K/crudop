@@ -5,9 +5,10 @@ const StudentArticals = require('../models/studentDetails.models.js')
 // add the student data into database
 const addArtical = async (req, res) =>{
     try{
-        const {studentId,article } = req.body;
+        const {article } = req.body;
+        const userId = req.user.id;
         const newStudent = new StudentArticals({
-            studentId,
+            studentId: userId,
             article
         });
 

@@ -35,7 +35,7 @@ const signUp = async (req, res) => {
     try{
         await student.save();
         const token = signToken(student._id)
-        res.status(201).json({
+        res.status(200).json({
             status: "success",
             token,
             data:{
