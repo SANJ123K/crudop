@@ -71,7 +71,7 @@ const login = async (req, res) =>{
             message: "Does not have any account"
         })}
     else{
-        const token = signToken(studentObj._id)
+        const token = signToken(studentObj.id)
         res.status(200).json({
             status:"success",
             token

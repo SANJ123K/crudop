@@ -9,7 +9,7 @@ app.use(express.json())
 
 app.use('/api/v1/student/article', router)
 app.use('/api/v1/student', authRouter)
-app.use('/api/v1/student/',enrollRouter)
+app.use('/api/v1/student',enrollRouter)
 
 
 
