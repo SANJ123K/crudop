@@ -4,12 +4,7 @@ const bcrypt = require('bcryptjs');
 
 
 const signToken = id => {
-    const jwt = process.env.JWT_SECRET_STR ;
-    if(!jwt){
-        return res.status(404).json({
-            status:"fail",
-            message:"provide json token"})
-        
+    const jwt = process.env.JWT_SECRET_STR ;        
     return jwt.sign({'id': id}, jwt, { expiresIn: 200000 })
 }
 
@@ -80,18 +75,9 @@ const login = async (req, res) =>{
         res.status(200).json({
             status:"success",
             token
-        })
-    }
+        })}
 
 }
 
 
-
-
-
-
-
-
-
-
-module.exports = {signUp, login}
+module.exports = {signUp, login};
