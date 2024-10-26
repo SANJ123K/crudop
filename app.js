@@ -8,9 +8,10 @@ const app = express();
 
 app.use(express.json())
 app.use(cors())
+
+app.use('/api/v1/student/auth', authRouter)
 app.use('/api/v1/student/article', router)
-app.use('/api/v1/student', authRouter)
-app.use('/api/v1/student',enrollRouter)
+app.use('/api/v1/student/enroll',enrollRouter)
 
 
 
