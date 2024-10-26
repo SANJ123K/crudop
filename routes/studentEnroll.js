@@ -4,12 +4,12 @@ const protect = require("../middlewares/protectRoute.middlewares.js")
 const enrollRouter = require('express').Router()
 
 
-enrollRouter.route('/enroll')
+enrollRouter.route('/')
 .post(protect, addCourse)
 .get(protect, getEnrollment)
 
 
-enrollRouter.route('/enroll/:id')
+enrollRouter.route('/:id')
 .patch(protect, updateEnroll)
 .delete(protect, deleteEnroll)
 
